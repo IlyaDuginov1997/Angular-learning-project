@@ -1,11 +1,22 @@
 <!--<app-form></app-form>-->
 <!--<app-structure-directives></app-structure-directives>-->
 
-<button (click)="expression = !expression">{{!expression ? 'one' : 'two'}}</button>
-<app-input-output
-  [title]="expression ? 'one' : 'two'"
-  (sayHi)="onSayHi($event)"
-  [(counter)]="age"
->
+<!--<button (click)="expression = !expression">{{!expression ? 'one' : 'two'}}</button>-->
+<!--<app-input-output-->
+<!--  [title]="expression ? 'one' : 'two'"-->
+<!--  (sayHi)="onSayHi($event)"-->
+<!--  [(counter)]="age"-->
+<!--&gt;-->
+<!--</app-input-output>-->
 
-</app-input-output>
+<!--<app-two-way-binding></app-two-way-binding>-->
+
+<app-ng-templates [template]="ref">
+  <h3 class="header">Header</h3>
+  <p class="body">Body</p>
+  <footer class="footer">Footer</footer>
+</app-ng-templates>
+
+<ng-template #ref let-element>
+  <p>{{element}} I am from App component</p>
+</ng-template>

@@ -7,13 +7,17 @@ import { FormComponent } from './components/form/form.component';
 import {FormsModule} from "@angular/forms";
 import { StructureDirectivesComponent } from './components/structure-directives/structure-directives.component';
 import { InputOutputComponent } from './components/input-output/input-output.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { NgTemplatesComponent } from './components/ng-templates/ng-templates.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     StructureDirectivesComponent,
-    InputOutputComponent
+    InputOutputComponent,
+    TwoWayBindingComponent,
+    NgTemplatesComponent
   ],
   imports: [
     BrowserModule,
