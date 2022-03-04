@@ -1,6 +1,8 @@
 <!--<app-form></app-form>-->
 <!--<app-structure-directives></app-structure-directives>-->
 
+
+
 <!--<button (click)="expression = !expression">{{!expression ? 'one' : 'two'}}</button>-->
 <!--<app-input-output-->
 <!--  [title]="expression ? 'one' : 'two'"-->
@@ -9,14 +11,44 @@
 <!--&gt;-->
 <!--</app-input-output>-->
 
+
+
 <!--<app-two-way-binding></app-two-way-binding>-->
 
-<app-ng-templates [template]="ref">
-  <h3 class="header">Header</h3>
-  <p class="body">Body</p>
-  <footer class="footer">Footer</footer>
-</app-ng-templates>
 
-<ng-template #ref let-element>
-  <p>{{element}} I am from App component</p>
-</ng-template>
+
+<!--<app-ng-templates [template]="ref">-->
+<!--  <h3 class="header">Header</h3>-->
+<!--  <p class="body">Body</p>-->
+<!--  <footer class="footer">Footer</footer>-->
+<!--</app-ng-templates>-->
+
+<!--<ng-template #ref let-element>-->
+<!--  <p>{{element}} I am from App component</p>-->
+<!--</ng-template>-->
+
+
+
+<div>
+  <button (click)="menu1.show()">Open menu </button>
+<!--  <button (click)="menu.hide()">Hide menu </button>-->
+  <app-host-directives #menu1>
+    <h1>From App component 1</h1>
+  </app-host-directives>
+</div>
+
+<div>
+  <button (click)="menu2.show()">Open menu </button>
+  <!--  <button (click)="menu.hide()">Hide menu </button>-->
+  <app-host-directives #menu2>
+    <h1>From App component 2</h1>
+  </app-host-directives>
+</div>
+
+<div>
+  <button (click)="menu3.show()">Open menu </button>
+  <!--  <button (click)="menu.hide()">Hide menu </button>-->
+  <app-host-directives #menu3>
+    <h1>From App component 3</h1>
+  </app-host-directives>
+</div>

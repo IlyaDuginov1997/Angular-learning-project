@@ -9,6 +9,7 @@ import { StructureDirectivesComponent } from './components/structure-directives/
 import { InputOutputComponent } from './components/input-output/input-output.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { NgTemplatesComponent } from './components/ng-templates/ng-templates.component';
+import { HostDirectivesComponent } from './components/host-directives/host-directives.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgTemplatesComponent } from './components/ng-templates/ng-templates.com
     StructureDirectivesComponent,
     InputOutputComponent,
     TwoWayBindingComponent,
-    NgTemplatesComponent
+    NgTemplatesComponent,
+    HostDirectivesComponent
   ],
   imports: [
     BrowserModule,
