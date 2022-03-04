@@ -1,0 +1,27 @@
+<h1 *ngIf="toggleFlag; else: elseCase">True</h1>
+
+<ng-template #elseCase>
+  <h1>False</h1>
+</ng-template>
+
+<button (click)="changeToggleFlag()">Toggle</button>
+
+<hr>
+
+<button (click)="generateUser()"> Generate user</button>
+<button (click)="deleteUser()"> Delete user</button>
+
+<ul *ngIf="deepObject?.user as user">
+  <li>Name is: {{user.name}}</li>
+  <li>Name is: {{user.surName}}</li>
+</ul>
+
+<hr>
+
+<ul>
+  <li *ngFor="let user of users; index as i; trackBy: trackBy" [ngSwitch]="user.template">
+    <p *ngSwitchCase="'bold'"><b>{{user.name}}</b></p>
+    <p *ngSwitchCase="'italic'"><i>{{user.name}}</i></p>
+    <p *ngSwitchDefault><span>{{user.name}}</span></p>
+  </li>
+</ul>

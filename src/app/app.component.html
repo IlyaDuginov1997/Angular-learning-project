@@ -1,0 +1,11 @@
+<!--<app-form></app-form>-->
+<!--<app-structure-directives></app-structure-directives>-->
+
+<button (click)="expression = !expression">{{!expression ? 'one' : 'two'}}</button>
+<app-input-output
+  [title]="expression ? 'one' : 'two'"
+  (sayHi)="onSayHi($event)"
+  [(counter)]="age"
+>
+
+</app-input-output>

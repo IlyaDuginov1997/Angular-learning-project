@@ -1,0 +1,14 @@
+<h1>form works!</h1>
+<div>
+  <p title="{{user.name}}">Name will be here</p>
+  <p [title]="user.name">Name will be here</p>
+  <p>This fullname: {{fullName}}</p>
+  <br>
+
+  <p (click)="updatePhoneNumber()">This phone: {{phone}}</p>
+  <input (input)="onInit($event, 123, user)" [value]="phone">
+
+  <br>
+  <div>{{user.name}}</div>
+  <input [(ngModel)]="user.name">
+</div>
