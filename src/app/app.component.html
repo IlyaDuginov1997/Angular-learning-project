@@ -29,26 +29,31 @@
 
 
 
-<div>
-  <button (click)="menu1.show()">Open menu </button>
-<!--  <button (click)="menu.hide()">Hide menu </button>-->
-  <app-host-directives #menu1>
-    <h1>From App component 1</h1>
-  </app-host-directives>
-</div>
+<!--<div>-->
+<!--  <button (click)="menu1.show()">Open menu </button>-->
+<!--&lt;!&ndash;  <button (click)="menu.hide()">Hide menu </button>&ndash;&gt;-->
+<!--  <app-host-directives #menu1>-->
+<!--    <h1>From App component 1</h1>-->
+<!--  </app-host-directives>-->
+<!--</div>-->
 
-<div>
-  <button (click)="menu2.show()">Open menu </button>
-  <!--  <button (click)="menu.hide()">Hide menu </button>-->
-  <app-host-directives #menu2>
-    <h1>From App component 2</h1>
-  </app-host-directives>
-</div>
+<!--<div>-->
+<!--  <button (click)="menu2.show()">Open menu </button>-->
+<!--  &lt;!&ndash;  <button (click)="menu.hide()">Hide menu </button>&ndash;&gt;-->
+<!--  <app-host-directives #menu2>-->
+<!--    <h1>From App component 2</h1>-->
+<!--  </app-host-directives>-->
+<!--</div>-->
 
-<div>
-  <button (click)="menu3.show()">Open menu </button>
-  <!--  <button (click)="menu.hide()">Hide menu </button>-->
-  <app-host-directives #menu3>
-    <h1>From App component 3</h1>
-  </app-host-directives>
-</div>
+<!--<div>-->
+<!--  <button (click)="menu3.show()">Open menu </button>-->
+<!--  &lt;!&ndash;  <button (click)="menu.hide()">Hide menu </button>&ndash;&gt;-->
+<!--  <app-host-directives #menu3>-->
+<!--    <h1>From App component 3</h1>-->
+<!--  </app-host-directives>-->
+<!--</div>-->
+
+
+<button (click)="changeShowMode()">Show title</button>
+<button (click)="title = title + 1">Modify input</button>
+<app-parent *ngIf="show" [title]="title"></app-parent>

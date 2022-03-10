@@ -7,10 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-learning-project';
-  expression = true
-  age = 18
+  show = true
 
-  onSayHi(text: string) {
-    console.log(text)
+  changeShowMode() {
+    this.show = !this.show
   }
+  // expression = true
+  // age = 18
+
+  // onSayHi(text: string) {
+  //   console.log(text)
+  // }
 }
